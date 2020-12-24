@@ -1,0 +1,19 @@
+.navbar {
+    /* background-color: #e15d8a; */
+    background-color:  rgb(161, 81, 133);
+ }
+
+ a {
+     color: white ;
+     padding: 1px 25px;
+     font-size: 16pt;
+ }
+ 
+ ul.navbar-nav {
+     align-items: center;
+ }
+ 
+ a:hover {
+   text-decoration: none;
+   color: rgb(15%, 50%, 52%) !important;
+ }

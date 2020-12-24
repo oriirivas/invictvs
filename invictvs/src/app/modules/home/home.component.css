@@ -1,0 +1,59 @@
+/* .background {
+    background-image: url(../../../assets/images/carousel/fondo.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+} */
+
+
+.navbar, .menu {
+    /* background-color: #e15d8a; */
+    background-color:  rgb(161, 81, 133);
+ }
+
+ a {
+     color: white ;
+     padding: 1px 25px;
+     font-size: 16pt;
+ }
+ 
+ ul.navbar-nav {
+     align-items: center;
+ }
+ 
+ li>span:hover {
+   text-decoration: none;
+   color: rgb(15%, 50%, 52%) !important;
+   cursor: pointer;
+ }
+
+ .nav-tabs .nav-item {
+    margin-bottom: -1px;
+    color: #fff;
+    font-size: 16pt;
+    padding: 5pt 20pt;
+}
+.nav-tabs {
+    border-bottom: none;
+}
+
+.navbar-toggler{
+    text-align: end
+}
+
+.fa-align-justify {
+    color:rgb(15%, 50%, 52%);
+    position: sticky;
+}
+
+.menuText {
+    color: #fff;
+    font-size: 16pt;
+    padding: 5pt 20pt 0pt;
+}
+
+@media screen and (max-width: 578px){
+    .menuText {
+        font-size: 11pt;
+    }
+}
