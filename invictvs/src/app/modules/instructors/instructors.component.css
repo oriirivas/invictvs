@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color:#FFF
+}
+/* Tarjetas cuadradas */
+.cardlist { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cardSize {
+    margin: 10px;
+    width: 230px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: rgb(15%, 50%, 52%);
+}
+.cardImageContainer{
+    width: inherit;
+    
+}
+.cardImg {
+    width: inherit;
+    height: 200px;
+    object-fit: cover; 
+    transition: 1s;
+}
+.cardImg:hover {
+    height: 250px;
+}
+
+.cardText {
+      font-family: 'Montserrat', sans-serif;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+.cardText strong {
+    color:#FFF
+
+}
+.person {
+    background: #FFF;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: relative;
+    top: -50px;
+    border: 5px rgb(161, 81, 133) solid;
+}
