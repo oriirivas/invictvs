@@ -12,4 +12,44 @@ export class InstructorsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  data = [ 
+    {
+      'name': 'Felipe Mendoza',
+      'img': 'assets/images/instructors/felipe.png',
+      'background': 'assets/images/instructors/felipe_presentation.png',
+      'text':'Instructor de pole sport y pole shoes en santiago'
+    },
+    {
+      'name': 'Ricardo Bustos',
+      'img': 'assets/images/instructors/ricky.png',
+      'background': 'assets/images/instructors/ricky_presentation.png',
+      'text':'Instructor de pole sport y flexibilidad en santiago'
+    },
+    {
+      'name': 'Carolina Luzi',
+      'img': 'assets/images/instructors/caro.png',
+      'background': 'assets/images/instructors/caro_presentation.png',
+      'text':'Instructor de pole sport en santiago'
+    },
+    {
+      'name': 'Paloma no se oops',
+      'img': 'assets/images/instructors/paloma.png',
+      'background': 'assets/images/instructors/paloma_presentation.png',
+      'text':'Instructor de pole sport y paradas de mano en santiago'
+    },
+    {
+      'name': 'Gretel Neira',
+      'img': 'assets/images/instructors/gretel.png',
+      'background': 'assets/images/instructors/gretel_presentation.png',
+      'text':'Instructor de pole sport en temuco'
+    },
+    {
+      'name': 'Claudia Guerrero',
+      'img': 'assets/images/instructors/claudia.png',
+      'background': 'assets/images/instructors/claudia_presentation.png',
+      'text':'Instructor de pole sport en temuco'
+    }
+
+  ]
+
 }

@@ -21,7 +21,7 @@ a {
     flex-shrink: 0;
     /* background-color: #f4fbff; */
     background-color: rgb(15%, 50%, 52%);
-    background-color: rgb(161, 81, 133);
+    /* background-color: rgb(161, 81, 133); */
 }
 .cardImageContainer{
     width: inherit;
