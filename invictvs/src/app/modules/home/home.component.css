@@ -5,7 +5,19 @@
     background-repeat: no-repeat;
 } */
 
-
+.img{
+ object-fit: cover;
+ width: 100vw;
+ max-height: 184pt;
+}
+.title {
+    position: relative;
+    top: -12pt;
+    font-size: 20pt;
+    background: rgb(161, 81, 133);
+    color: white;
+    padding: 5pt;
+}
 .navbar, .menu {
     /* background-color: #e15d8a; */
     background-color:  rgb(161, 81, 133);

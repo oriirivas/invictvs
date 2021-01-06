@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap");
 /* font-family: 'Montserrat', sans-serif; */
-.fondo{
-    background-image: url("/invictvs/src/assets/images/carousel/invictvs.jpg");
-}
+
 a {
   text-decoration: none;
   font-weight: bold;
   color: #fff;
+  color: rgb(161, 81, 133);
+  color: rgb(15%, 50%, 52%);
 }
 /* Tarjetas cuadradas */
 .cardlist {
@@ -20,7 +20,8 @@ a {
   border-radius: 10px;
   overflow: hidden;
   flex-shrink: 0;
-  background-color: rgb(15%, 50%, 52%);
+  /* background-color: gainsboro; */
+  background-color: #f7f7f7;
 }
 .cardImageContainer {
   width: inherit;
@@ -42,12 +43,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -40pt;
+  margin-top: -20pt;
   min-height: 100pt;
 }
-.cardText strong {
-  color: #fff;
+.cardName {
+  margin-top: -30pt;
+  text-align: center;
 }
+
 .person {
   background: #fff;
   width: 90px;

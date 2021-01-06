@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+// import Swiper core and required components
+import SwiperCore from "swiper/core";
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -12,6 +13,13 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSwiper(swiper) {
+    console.log(swiper)
+  }
+  onSlideChange() {
+    console.log('slide change')
   }
 
   public sectionList: string[] = [

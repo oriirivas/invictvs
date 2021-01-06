@@ -1,23 +1,54 @@
-<div class="container mt-4 fondo">
-    <div class="col-12 cardlist ">
-        <a *ngFor="let item of data"
-         href="#talentSearch" class="menuItems">
-          <article class="cardSize">
-            <figure class="cardImageContainer">
-              <img class="cardImg" [src]="item.background">
-            </figure> 
-            <div class="d-center">
-                <div class="d-center person">circle
-                      <img class="image" [src]="item.img" [alt]="item.name">
-                </div>
-                
-            </div>
-            <div class="cardText">
-              <span>{{item.text}}
-                </span>
-            </div>
-        </article>
-        </a>
-        
-      </div>
+<div style="background-color: rgb(15%, 50%, 52%) ; color: white;" class="d-center">
+  <h1>Instructores</h1>
 </div>
+<div class="fondo">
+  <div class="container mt-4 fondo">
+    <div class="col-12 cardlist ">
+      <swiper effect="fade" [slidesPerView]="4" [spaceBetween]="50"
+      [breakpoints]="breakPoints" [loop]="true" [autoplay]="200">
+        <ng-template *ngFor="let item of data" swiperSlide>
+          <a 
+           href="#talentSearch" class="menuItems">
+            <article class="cardSize">
+              <figure class="cardImageContainer">
+                <img class="cardImg" [src]="item.background">
+              </figure> 
+              <div class="d-center">
+                  <div class="d-center person">
+                        <img class="image" [src]="item.img" [alt]="item.name">
+                  </div>
+                  
+              </div>
+              <div class="cardName">
+                <strong>{{item.name}}</strong>
+              </div>
+              <div class="cardText"> 
+                <span>{{item.text}}</span>
+              </div>
+          </article>
+          </a>
+        </ng-template>
+      </swiper>
+        <!-- <a *ngFor="let item of data"
+           class="menuItems d-none d-sm-none d-md-block">
+            <article class="cardSize">
+              <figure class="cardImageContainer">
+                <img class="cardImg" [src]="item.background">
+              </figure> 
+              <div class="d-center">
+                  <div class="d-center person">circle
+                        <img class="image" [src]="item.img" [alt]="item.name">
+                  </div>
+                  
+              </div>
+              <div class="cardText">
+                <span>{{item.text}}
+                  </span>
+              </div>
+          </article>
+          </a> -->
+          
+        </div>
+  </div>
+</div>
+

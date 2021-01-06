@@ -1,11 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
-export class CarouselModel {
-  image: string;
-  text: string;
-  size: string;
-
-}
+import { Component, Input, OnInit } from '@angular/core';
+import { CarouselModel } from './carousel.model';
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
@@ -13,28 +7,28 @@ export class CarouselModel {
 })
 export class CarouselComponent implements OnInit {
 
+  @Input() data: CarouselModel | undefined;
+  @Input() title: string ='';
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  public carouselList: CarouselModel[]=[
-    {
-      image: 'assets/images/carousel/invictvs_temuco2.jpg',
-      text: 'Nueva sede en Temuco',
-      size: 'width: 50%;'
+  breakPoints = {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: -50
     },
-    {
-      image: 'assets/images/carousel/invictvs_temuco2.jpg',
-      text: '',
-      size: 'width: 50%;'
-      
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 30
     },
-    {
-      image: 'assets/images/carousel/team.jpg',
-      text: 'Se parte de nuestro equipo de competencia',
-      size: 'width: 100%;'
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 60
     }
-  ]
+  }
 
 }

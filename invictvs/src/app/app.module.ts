@@ -12,6 +12,7 @@ import { EventsComponent } from './modules/events/events.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CarouselComponent } from './modules/carousel/carousel.component';
 
+import { SwiperModule } from 'swiper/angular';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
@@ -29,7 +30,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    SwiperModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

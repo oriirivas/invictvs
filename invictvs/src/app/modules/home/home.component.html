@@ -1,29 +1,45 @@
 <div class="background">
-  <div class="d-none d-sm-none d-md-block">
-    <app-carousel></app-carousel>
-  </div>
-  <ng-container> 
+  <img
+  class="p-0 img d-none d-sm-none d-md-block"
+  src="../../../assets/images/carousel/team.jpg"
+  />
+  <img
+  class="p-0 img d-block d-sm-block d-md-none"
+  src="../../../assets/images/carousel/teamSmall.jpg"
+  />
+<span class="title" >
+  INVICTVS<small> pole dance studio</small>
+</span>
+  
+  <ng-container>
     <!-- <img class="col-md-3" src="../../../assets/images/carousel/invictvs.jpg" /> -->
     <!-- <app-header></app-header> -->
-    <div class="menu d-center " >
-        <ul class="d-center p-0">
-            <li
-              *ngFor="let section of sectionList"
-              [ngClass]="active === section ? 'active' : ''"
-              (click)="setActive(section)"
-              class="row menuText"
-            >   
-              <span> {{ section }}</span>
-            </li>
-          </ul>
-    </div>
+    <!-- <div class="menu d-center">
+      <ul class="d-center p-0">
+        <li
+          *ngFor="let section of sectionList"
+          [ngClass]="active === section ? 'active' : ''"
+          (click)="setActive(section)"
+          class="row menuText"
+        >
+          <span> {{ section }}</span>
+        </li>
+      </ul>
+    </div> -->
   </ng-container>
-  <ng-container *ngIf="active === 'Inicio' ">
-    <div class="container mt-5">
+  <ng-container *ngIf="active === 'Inicio'">
+   
+    <div class="container ">
       <div class="d-flex flex-wrap">
-        <img class="d-none d-sm-none d-md-block col-md-3" src="../../../assets/images/carousel/invictvs.jpg" />
-        <div class="col-md-8">
-          <h1 class="d-none d-sm-none d-md-block">INVICTVS<small> pole dance studio</small></h1>
+        <!-- <img
+          class="d-none d-sm-none d-md-block col-md-3"
+          src="../../../assets/images/carousel/invictvs.jpg"
+        />  -->
+        
+        <!-- <div class="col-md-8">
+          <h1 class="d-none d-sm-none d-md-block">
+            INVICTVS<small> pole dance studio</small>
+          </h1>
           <p>
             Invictvs pole dance studio es una de las mejores escuela del mundo
             ok, y se preguntaran por que? bueno porque yo lo digo y punto att:
@@ -34,19 +50,17 @@
             en la region metropolitana y la otra en temuco
           </p>
           <p>Oriana es mala para los textos oops</p>
-        </div>
+        </div> -->
       </div>
-      <div>Eventos</div>
-      <div>Certificaciones</div>
     </div>
   </ng-container>
-  <ng-container  *ngIf="active === 'Medallero' ">
-      <app-medals></app-medals>
+  <ng-container >
+    <app-instructors></app-instructors>
   </ng-container>
-  <ng-container  *ngIf="active === 'Instructores' ">
-      <app-instructors></app-instructors>
+  <ng-container >
+    <app-medals></app-medals>
   </ng-container>
-  <ng-container  *ngIf="active === 'Eventos' ">
-      <app-events></app-events>
+  <ng-container *ngIf="active === 'Eventos'">
+    <app-events></app-events>
   </ng-container>
 </div>
