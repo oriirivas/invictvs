@@ -1,66 +1,61 @@
 <div class="background">
   <img
-  class="p-0 img d-none d-sm-none d-md-block"
-  src="../../../assets/images/carousel/team.jpg"
+    class="p-0 img d-none d-sm-none d-md-block"
+    src="../../../assets/images/carousel/team.jpg"
   />
   <img
-  class="p-0 img d-block d-sm-block d-md-none"
-  src="../../../assets/images/carousel/teamSmall.jpg"
+    class="p-0 img d-block d-sm-block d-md-none"
+    src="../../../assets/images/carousel/teamSmall.jpg"
   />
-<span class="title" >
-  INVICTVS<small> pole dance studio</small>
-</span>
-  
+  <span class="title"> INVICTVS<small> pole dance studio</small> </span>
+
   <ng-container>
-    <!-- <img class="col-md-3" src="../../../assets/images/carousel/invictvs.jpg" /> -->
-    <!-- <app-header></app-header> -->
-    <!-- <div class="menu d-center">
-      <ul class="d-center p-0">
-        <li
-          *ngFor="let section of sectionList"
-          [ngClass]="active === section ? 'active' : ''"
-          (click)="setActive(section)"
-          class="row menuText"
-        >
-          <span> {{ section }}</span>
-        </li>
-      </ul>
-    </div> -->
-  </ng-container>
-  <ng-container *ngIf="active === 'Inicio'">
-   
-    <div class="container ">
-      <div class="d-flex flex-wrap">
-        <!-- <img
-          class="d-none d-sm-none d-md-block col-md-3"
-          src="../../../assets/images/carousel/invictvs.jpg"
-        />  -->
-        
-        <!-- <div class="col-md-8">
-          <h1 class="d-none d-sm-none d-md-block">
-            INVICTVS<small> pole dance studio</small>
-          </h1>
-          <p>
-            Invictvs pole dance studio es una de las mejores escuela del mundo
-            ok, y se preguntaran por que? bueno porque yo lo digo y punto att:
-            ori
-          </p>
-          <p>
-            Actualmente cuenta con 2 sedes la primera en la comuna de la reina
-            en la region metropolitana y la otra en temuco
-          </p>
-          <p>Oriana es mala para los textos oops</p>
-        </div> -->
+    <div class="d-none d-sm-none d-md-block">
+      <div class="titleBar d-center">
+        <h1>Sedes</h1>
       </div>
+      <div class="d-center">
+        <a *ngFor="let item of sedeData" href="#talentSearch" class="menuItems">
+          <article class="cardSize">
+            <figure class="cardImageContainer">
+              <img class="cardImg" [src]="item?.background" />
+            </figure>
+            <ng-container *ngIf="!item?.name">
+              <div class="cardName">
+                <strong>{{ item.name }}</strong>
+              </div>
+            </ng-container>
+            <div class="cardText d-center">
+              <span>{{ item?.text }} </span>
+              <a *ngIf="item?.instagram" [href]="item.instagram" class="col-12">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <span class="instagramName"> {{ item?.instagramName }} </span>
+              </a>
+            </div>
+          </article>
+        </a>
+      </div>
+      
+    </div>
+    <div class=" d-block d-sm-block d-md-none">
+      <app-carousel [data]="sedeData" [title]="'Sedes'"></app-carousel>
     </div>
   </ng-container>
-  <ng-container >
-    <app-instructors></app-instructors>
+
+  <ng-container>
+    <app-carousel
+      [data]="classData"
+      [title]="'Clases'"
+      [color]="'rgb(161, 81, 133)'"
+    ></app-carousel>
   </ng-container>
-  <ng-container >
-    <app-medals></app-medals>
+  <ng-container>
+    <app-carousel [data]="instructursData" [title]="'Instructores'"></app-carousel>
   </ng-container>
-  <ng-container *ngIf="active === 'Eventos'">
-    <app-events></app-events>
+  <ng-container>
+    <app-carousel [data]="medalData" [title]="'Medallero'" [color]="'rgb(161, 81, 133)'"></app-carousel>
+  </ng-container>
+  <ng-container>
+    <app-carousel [data]="eventsData" [title]="'Eventos'"></app-carousel>
   </ng-container>
 </div>

@@ -1,7 +1,4 @@
-<div
-  style="background-color: rgb(15%, 50%, 52%); color: white"
-  class="d-center"
->
+<div [ngStyle]="{ background: color }" class="titleBar d-center">
   <h1>{{ title }}</h1>
 </div>
 <div class="fondo">
@@ -9,11 +6,11 @@
     <div class="col-12 cardlist">
       <swiper
         effect="fade"
-        [slidesPerView]="4"
         [spaceBetween]="50"
         [breakpoints]="breakPoints"
         [loop]="true"
         [autoplay]="200"
+        [centeredSlides]="true"
       >
         <ng-template *ngFor="let item of data" swiperSlide>
           <a href="#talentSearch" class="menuItems">
@@ -21,25 +18,34 @@
               <figure class="cardImageContainer">
                 <img class="cardImg" [src]="item?.background" />
               </figure>
-              <div class="d-center">
+              <div class="d-center ">
                 <ng-container *ngIf="item?.img">
                   <div class="d-center person">
                     <img class="image" [src]="item.img" [alt]="item.name" />
                   </div>
                 </ng-container>
-                <ng-container *ngIf="!item?.img">
+                <ng-container *ngIf="item?.icon">
                   <div class="d-center circleIcon">
-                    <strong>{{item?.iconText}}</strong> <span [innerHTML]="item?.icon"></span>
+                    <strong>{{ item?.iconText }}</strong>
+                    <span [innerHTML]="item?.icon"></span>
+                  </div>
+                </ng-container>
+                <ng-container *ngIf="!item?.icon && !item?.img">
+                  <div class="d-center justText">
                   </div>
                 </ng-container>
               </div>
-              <ng-container *ngIf="!item?.name">
-                <div  class="cardName">
-                  <strong>{{item.name}}</strong>
+              <ng-container >
+                <div class="cardName">
+                  <strong>{{ item?.name }}</strong>
                 </div>
               </ng-container>
-              <div class="cardText">
+              <div class="cardText d-center">
                 <span>{{ item?.text }} </span>
+                <a *ngIf="item?.instagram" [href]="item.instagram" class="col-12 d-center p-0">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                  <span class="instagramName"> {{ item?.instagramName }} </span>
+                </a>
               </div>
             </article>
           </a>

@@ -5,4 +5,6 @@ export class CarouselModel {
     text:string;
     icon:string;
     iconText:string;
+    instagram:string;
+    instagramName: string
 }

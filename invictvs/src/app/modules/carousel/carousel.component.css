@@ -1,7 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap");
 /* font-family: 'Montserrat', sans-serif; */
-
+.titleBar{
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(15%, 50%, 52%); 
+  color: white;
+  padding-top: 0.4rem;
+}
 a {
+  font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   font-weight: bold;
   color: #fff;
@@ -39,14 +45,22 @@ a {
   font-family: "Montserrat", sans-serif;
   padding: 20px;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: -40pt;
+  margin-top: -15pt;
   min-height: 100pt;
 }
+.cardText > a {
+  text-align: left;
+  color: rgb(161, 81, 133);
+}
+.instagramName {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10pt;
+  color: rgb(15%, 50%, 52%);
+  padding: 5pt;
+}
 .cardName {
-  margin-top: -30pt;
+  /* margin-top: -30pt; */
+  margin-top: -35pt;
   text-align: center;
 }
 .person,
@@ -61,7 +75,10 @@ a {
   height: 90px;
   border: 5px rgb(161, 81, 133) solid;
 }
+.justText{
+  height: 70px;
 
+}
 .circleIcon {
   width: 70px;
   height: 70px;
@@ -74,4 +91,10 @@ a {
   border-radius: 50%;
   object-fit: cover;
   position: absolute;
+}
+/* tentativooooo */
+@media only screen and (max-width: 480px) {
+  :host ::ng-deep .swiper-slide-prev {
+    margin-left: 20px;  
+  } 
 }
