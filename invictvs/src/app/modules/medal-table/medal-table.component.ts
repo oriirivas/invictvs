@@ -59,17 +59,17 @@ export class MedalTableComponent implements OnInit {
     {
       'name': 'Ricardo Bustos',
       'text':'Presentacion de jurado en el Paraguay Pole Championship 2019',
-      'video':this.sanitizer.bypassSecurityTrustResourceUrl('https:/www.youtube.com/embed/bTrF0hnRn7Q')
+      'video':this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/bTrF0hnRn7Q')
     },
     {
       'name': 'Sandra Loyola ',
       'text':'Chile  pole championship 2019 1er lugar Amateur I ',
-      'video':this.sanitizer.bypassSecurityTrustResourceUrl('https:/www.youtube.com/embed/GZvipj_idKU')
+      'video':this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/GZvipj_idKU')
     },
     {
       'name': 'Ana Maria Papic',
       'text':'Pan American Pole Championship 2019 1er lugar Master 40',
-      'video':this.sanitizer.bypassSecurityTrustResourceUrl('https:/www.youtube.com/embed/NIkcTPjxnag')
+      'video':this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/NIkcTPjxnag')
     }
   ]
 }
