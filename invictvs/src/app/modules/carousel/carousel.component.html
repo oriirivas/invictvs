@@ -42,9 +42,13 @@
               </ng-container>
               <div class="cardText d-center">
                 <span>{{ item?.text }} </span>
-                <a *ngIf="item?.instagram" [href]="item.instagram" class="col-12 d-center p-0">
+                <a *ngIf="item?.instagram" [href]="item.instagram" class=" d-center p-2">
                   <i class="fa fa-instagram" aria-hidden="true"></i>
-                  <span class="instagramName"> {{ item?.instagramName }} </span>
+                  <!-- <span class="instagramName"> {{ item?.instagramName }} </span> -->
+                </a>
+                <a *ngIf="item?.youtube" [href]="item.instagram" class="d-center p-2">
+                  <i class="fa fa-youtube" aria-hidden="true"></i>
+                  <!-- <span class="instagramName"> {{ item?.instagramName }} </span> -->
                 </a>
               </div>
             </article>

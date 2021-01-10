@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 // import Swiper core and required components
 import SwiperCore from "swiper/core";
 import { CarouselModel } from '../carousel/carousel.model';
@@ -11,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   public active: string = 'Inicio'
 
-  constructor() { }
+  constructor(private sanitizer:DomSanitizer) { }
 
   ngOnInit(): void {
   }
@@ -26,7 +27,8 @@ export class HomeComponent implements OnInit {
       'icon': '',
       'iconText': '',
       'instagram': 'https://www.instagram.com/invictvspolesportdancestudio/',
-      'instagramName': '@invictvspoles...'
+      'instagramName': '@invictvspoles...',
+      'youtube':''
     },
     {    
       'name': 'Temuco',
@@ -36,7 +38,8 @@ export class HomeComponent implements OnInit {
       'icon': '',
       'iconText': '',
       'instagram': 'https://www.instagram.com/invictvspolesportdancetemuco/',
-      'instagramName': '@invictvspoles...'
+      'instagramName': '@invictvspoles...',
+      'youtube':''
     },
   ]
 
@@ -50,7 +53,8 @@ export class HomeComponent implements OnInit {
       'icon': '',
       'iconText': '',
       'instagram': '',
-      'instagramName': ''
+      'instagramName': '',
+      'youtube':''
     },
     {    
       'name': 'Flexibilidad',
@@ -60,7 +64,8 @@ export class HomeComponent implements OnInit {
       'icon': '',
       'iconText': '',
       'instagram': '',
-      'instagramName': ''
+      'instagramName': '',
+      'youtube':''
     },
     {
       'name': 'Pole Exotic',
@@ -70,7 +75,8 @@ export class HomeComponent implements OnInit {
       'icon': '',
       'iconText': '',
       'instagram': '',
-      'instagramName': ''
+      'instagramName': '',
+      'youtube':''
     },
     {    
       'name': 'Clase online',
@@ -80,7 +86,8 @@ export class HomeComponent implements OnInit {
       'icon': '',
       'iconText': '',
       'instagram': '',
-      'instagramName': ''
+      'instagramName': '',
+      'youtube':''
     },
     {
       'name': 'Acrobacias',
@@ -90,7 +97,8 @@ export class HomeComponent implements OnInit {
       'icon': '',
       'iconText': '',
       'instagram': '',
-      'instagramName': ''
+      'instagramName': '',
+      'youtube':''
     },
     {    
       'name': 'Certificad',
@@ -100,7 +108,8 @@ export class HomeComponent implements OnInit {
       'icon': '',
       'iconText': '',
       'instagram': '',
-      'instagramName': ''
+      'instagramName': '',
+      'youtube':''
     },
     {
       'name': 'Intensivo',
@@ -110,7 +119,8 @@ export class HomeComponent implements OnInit {
       'icon': '',
       'iconText': '',
       'instagram': '',
-      'instagramName': ''
+      'instagramName': '',
+      'youtube':''
     }
   ]
 
@@ -123,7 +133,8 @@ export class HomeComponent implements OnInit {
       'icon': '',
       'iconText': '',
       'instagram': 'https://www.instagram.com/felipemendozap/',
-      'instagramName': '@felipemendozap'
+      'instagramName': '@felipemendozap',
+      'youtube':this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/a06RMHZxPF0')
     },
     {
       'name': 'Ricardo Bustos',
@@ -133,7 +144,8 @@ export class HomeComponent implements OnInit {
       'icon': '',
       'iconText': '',
       'instagram': 'https://www.instagram.com/rickii_pole/',
-      'instagramName': '@rickii_pole'
+      'instagramName': '@rickii_pole',
+      'youtube':this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/OTQuB231bMc')
     },
     {
       'name': 'Carolina Luzi',
@@ -143,17 +155,19 @@ export class HomeComponent implements OnInit {
       'icon': '',
       'iconText': '',
       'instagram': 'https://www.instagram.com/cayitosan/',
-      'instagramName': '@cayitosan'
+      'instagramName': '@cayitosan',
+      'youtube':''
     },
     {
-      'name': 'Paloma no se oops',
+      'name': 'Paloma Velasco',
       'img': 'assets/images/instructors/paloma.png',
       'background': 'assets/images/instructors/paloma_presentation.png',
       'text':'Instructor de pole sport y paradas de mano en santiago',
       'icon': '',
       'iconText': '',
       'instagram': 'https://www.instagram.com/paloma.pole/',
-      'instagramName': '@paloma.pole'
+      'instagramName': '@paloma.pole',
+      'youtube':''
     },
     {
       'name': 'Gretel Neira',
@@ -163,7 +177,8 @@ export class HomeComponent implements OnInit {
       'icon': '',
       'iconText': '',
       'instagram': 'https://www.instagram.com/greteln/',
-      'instagramName': '@greteln'
+      'instagramName': '@greteln',
+      'youtube':''
     },
     {
       'name': 'Claudia Guerrero',
@@ -173,7 +188,8 @@ export class HomeComponent implements OnInit {
       'icon': '',
       'iconText': '',
       'instagram': 'https://www.instagram.com/claudiaguerreroperi/',
-      'instagramName': '@claudiaguerreroperi'
+      'instagramName': '@claudiaguerreroperi',
+      'youtube':''
     }
 
   ]
@@ -187,7 +203,8 @@ export class HomeComponent implements OnInit {
       'icon': '<i class="fas fa-medal"></i>',
       'iconText': '25',
       'instagram': '',
-      'instagramName': ''
+      'instagramName': '',
+      'youtube':''
     },
     {
       'name': '',
@@ -197,7 +214,8 @@ export class HomeComponent implements OnInit {
       'icon': '<i class="fas fa-medal"></i>',
       'iconText': '21',
       'instagram': '',
-      'instagramName': ''
+      'instagramName': '',
+      'youtube':''
     },
     {
       'name': '',
@@ -207,7 +225,8 @@ export class HomeComponent implements OnInit {
       'icon': '<i class="fas fa-medal"></i>',
       'iconText': '34',
       'instagram': '',
-      'instagramName': ''
+      'instagramName': '',
+      'youtube':''
     },
     {
       'name': '',
@@ -217,7 +236,8 @@ export class HomeComponent implements OnInit {
       'icon': '<i class="fas fa-medal"></i>',
       'iconText': '3',
       'instagram': '',
-      'instagramName': ''
+      'instagramName': '',
+      'youtube':''
     },
     {
       'name': '',
@@ -227,7 +247,8 @@ export class HomeComponent implements OnInit {
       'icon': '<i class="fas fa-medal"></i>',
       'iconText': '12',
       'instagram': '',
-      'instagramName': ''
+      'instagramName': '',
+      'youtube':''
     },
     {
       'name': '',
@@ -237,7 +258,8 @@ export class HomeComponent implements OnInit {
       'icon': '<i class="fas fa-medal"></i>',
       'iconText': '1',
       'instagram': '',
-      'instagramName': ''
+      'instagramName': '',
+      'youtube':''
     },
     {
       'name': '',
@@ -247,7 +269,8 @@ export class HomeComponent implements OnInit {
       'icon': '<i class="fas fa-medal"></i>',
       'iconText': '7',
       'instagram': '',
-      'instagramName': ''
+      'instagramName': '',
+      'youtube':''
     }
   ]
 
@@ -260,7 +283,8 @@ export class HomeComponent implements OnInit {
       'icon': '',
       'iconText': '',
       'instagram': '',
-      'instagramName': ''
+      'instagramName': '',
+      'youtube':''
     },
     {    
       'name': 'Encuento nacional de pole dance',
@@ -270,7 +294,8 @@ export class HomeComponent implements OnInit {
       'icon': '',
       'iconText': '',
       'instagram': '',
-      'instagramName': ''
+      'instagramName': '',
+      'youtube':''
     },
     {
       'name': 'Online pole championship',
@@ -280,7 +305,8 @@ export class HomeComponent implements OnInit {
       'icon': '',
       'iconText': '',
       'instagram': '',
-      'instagramName': ''
+      'instagramName': '',
+      'youtube':''
     },
     {
       'name': 'Shows online de pole',
@@ -290,7 +316,8 @@ export class HomeComponent implements OnInit {
       'icon': '',
       'iconText': '',
       'instagram': '',
-      'instagramName': ''
+      'instagramName': '',
+      'youtube':''
     }
   ]
 

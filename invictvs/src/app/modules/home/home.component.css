@@ -85,3 +85,13 @@ a {
   object-fit: cover;
   position: absolute;
 }
+@media only screen and (max-width: 480px) {
+   .h1,
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  .title{
+    font-size: 1.5rem !important;
+    
+  }
+}

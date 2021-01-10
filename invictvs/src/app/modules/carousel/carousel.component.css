@@ -27,6 +27,7 @@ a {
   overflow: hidden;
   flex-shrink: 0;
   background-color: #f7f7f7;
+  margin-bottom: 2rem;
 }
 .cardImageContainer {
   width: inherit;
@@ -97,4 +98,7 @@ a {
   :host ::ng-deep .swiper-slide-prev {
     margin-left: 20px;  
   } 
+  .h1, h1 {
+    font-size: 1.5rem !important;
+  }
 }
