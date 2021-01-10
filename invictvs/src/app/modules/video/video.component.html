@@ -1,0 +1,48 @@
+<div [ngStyle]="{ background: color }" class="titleBar d-center">
+    <h1>{{ title }}</h1>
+  </div>
+  <div class="fondo">
+    <div class="container mt-4 fondo">
+      <div class="col-12 cardlist">
+        <swiper
+          effect="fade"
+          [spaceBetween]="50"
+          [breakpoints]="breakPoints"
+          [loop]="true"
+          [autoplay]="200"
+          [centeredSlides]="true"
+        >
+          <ng-template *ngFor="let item of data" swiperSlide>
+            <a href="#talentSearch" class="menuItems">
+              <article class="cardSize">
+                <figure class="cardImageContainer">
+                  <iframe
+                    class="videoSize"
+                    [src]="item?.video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </figure>
+                <div class="d-center">
+                  <ng-container>
+                    <div class="d-center justText"></div>
+                  </ng-container>
+                </div>
+                <ng-container>
+                  <div class="cardName">
+                    <strong>{{ item?.name }}</strong>
+                  </div>
+                </ng-container>
+                <div class="cardText d-center">
+                  <span>{{ item?.text }}</span>
+                </div>
+              </article>
+            </a>
+          </ng-template>
+  
+        </swiper>
+      </div>
+    </div>
+  </div>
+  
