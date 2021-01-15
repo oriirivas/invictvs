@@ -3,6 +3,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 // import Swiper core and required components
 import SwiperCore from "swiper/core";
 import { CarouselModel } from '../carousel/carousel.model';
+import { MedalTableComponent } from '../medal-table/medal-table.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -11,6 +12,7 @@ import { CarouselModel } from '../carousel/carousel.model';
 export class HomeComponent implements OnInit {
 
   public active: string = 'Inicio'
+  
 
   constructor(private sanitizer:DomSanitizer) { }
 
@@ -216,7 +218,7 @@ export class HomeComponent implements OnInit {
       'background': 'assets/images/competetion/chilean_pole_sport.jpg',
       'text':'Chilean pole sport championship',
       'icon': '<i class="fas fa-medal"></i>',
-      'iconText': '25',
+      'iconText': '3',
       'route': 'medals/1',
       'instagram': '',
       'instagramName': '',
@@ -289,9 +291,9 @@ export class HomeComponent implements OnInit {
       'text':'En Equilibrio pole championship',
       'icon': '<i class="fas fa-medal"></i>',
       'iconText': '7',
-      'route': '',
+      'route': 'medals/7',
       'instagram': '',
-      'instagramName': 'medals/7',
+      'instagramName': '',
       'youtube':''
     }
   ]

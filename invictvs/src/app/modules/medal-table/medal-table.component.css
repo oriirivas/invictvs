@@ -1,5 +1,6 @@
 .background {
   background-color: #f7f7f7;
+  min-height: 80vh;
 }
 .modal-header {
   background-color: rgb(161, 81, 133);
@@ -16,10 +17,13 @@
   justify-content: space-around;
   align-items: center;
 }
-.fa-youtube {
+.fa-youtube, .back {
   color: rgb(15%, 50%, 52%);
 }
-
+.back{
+    text-decoration: none;
+    font-size: 14pt;
+}
 .border {
   border: 2px solid rgb(161, 81, 133) !important;
   margin-top: -0.1rem;
