@@ -13,7 +13,7 @@
         [centeredSlides]="true"
       >
         <ng-template *ngFor="let item of data" swiperSlide>
-          <a href="#talentSearch" class="menuItems">
+          <a [routerLink]="item.route" routerLinkActive="router-link-active" class="menuItems">
             <article class="cardSize">
               <figure class="cardImageContainer">
                 <img class="cardImg" [src]="item?.background" />

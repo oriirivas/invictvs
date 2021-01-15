@@ -10,4 +10,5 @@ export class CarouselModel {
     instagram:string;
     instagramName: string;
     youtube: SafeResourceUrl;
+    route: string;
 }

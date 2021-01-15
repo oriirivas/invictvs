@@ -1,5 +1,39 @@
-<h1>Holaaaaaa</h1>
-<div *ngFor="let item of currentData">
-  <h1>{{item.name}}</h1>
-
+<div class="background vh-100 row justify-content-center">
+  <div class="container  col-12 col-md-10 p-4">
+    <div class="modal-header d-flex justify-content-around ">
+      <div class="col-1 pr-5">Lugar</div>
+      <div class="col-4">Nombre</div>
+      <div class="col-4">Categoria</div>
+      <div class="col-3">Año</div>
+    </div>
+    <div class="col-12 pt-4 border">
+      <div
+        class="info "
+        *ngFor="let item of currentData ; let i = index"
+        [ngStyle]="{'border-bottom': i < this.arrayLength-1 ? '1px solid rgb(15%, 50%, 52%);' : 'none'}"
+      >
+        <div
+          class="col-1"
+          [ngStyle]="{
+            color:
+              item.place === 1
+                ? 'goldenrod'
+                : item.place === 2
+                ? 'grey'
+                : 'sienna'
+          }"
+        >
+          <i class="fas fa-medal"></i>
+        </div>
+        <div class="col-4">{{ item.name }}</div>
+        <div class="col-4">{{ item.category }}</div>
+        <div class="col-3 d-flex">{{ item.year }}
+  
+          <a [href]="item.video">
+            <i class="fa fa-youtube" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

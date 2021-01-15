@@ -7,7 +7,8 @@ import { CompetitionModel, MedalModel } from './medal-model';
   styleUrls: ['./medal-table.component.css']
 })
 export class MedalTableComponent implements OnInit {
-  id: number =0
+  id: number =0;
+  arrayLength: number =0;
   currentData: MedalModel[];
   constructor(private rutaActiva: ActivatedRoute) {
     this.id=this.rutaActiva.snapshot.params.id 
@@ -24,7 +25,8 @@ export class MedalTableComponent implements OnInit {
        console.log('item', item.id)
       if(item.id==this.id){
         this.currentData = item.data
-        // console.log('dentro',this.currentData);
+        this.arrayLength = item.data.length
+        console.log('dentro',this.arrayLength);
       }
    })
   }
@@ -42,15 +44,15 @@ export class MedalTableComponent implements OnInit {
         },
         { 
           'name': 'Contanza riquelme',
-          'category': 'juvenil',
-          'place': 1,
+          'category': 'Master 40',
+          'place': 2,
           'video': '',
           'year': 2019,
         },
         { 
           'name': 'Contanza riquelme',
           'category': 'juvenil',
-          'place': 1,
+          'place': 3,
           'video': '',
           'year': 2019,
         },
@@ -66,6 +68,65 @@ export class MedalTableComponent implements OnInit {
     },
     {
       'id':2,
+      'data': [
+        { 
+          'name': 'Contanza riquelme',
+          'category': 'juvenil',
+          'place': 1,
+          'video': '',
+          'year': 2019,
+        }
+      ]
+    },
+    {
+      'id':3,
+      'data': [
+        { 
+          'name': 'Contanza riquelme',
+          'category': 'juvenil',
+          'place': 1,
+          'video': '',
+          'year': 2019,
+        }
+      ]
+    },
+    {
+      'id':4,
+      'data': [
+        { 
+          'name': 'Contanza riquelme',
+          'category': 'juvenil',
+          'place': 1,
+          'video': '',
+          'year': 2019,
+        }
+      ]
+    },
+    {
+      'id':5,
+      'data': [
+        { 
+          'name': 'Contanza riquelme',
+          'category': 'juvenil',
+          'place': 1,
+          'video': '',
+          'year': 2019,
+        }
+      ]
+    },{
+      'id':6,
+      'data': [
+        { 
+          'name': 'Contanza riquelme',
+          'category': 'juvenil',
+          'place': 1,
+          'video': '',
+          'year': 2019,
+        }
+      ]
+    },
+    {
+      'id':7,
       'data': [
         { 
           'name': 'Contanza riquelme',

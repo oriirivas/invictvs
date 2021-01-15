@@ -1,0 +1,28 @@
+.background {
+  background-color: #f7f7f7;
+}
+.modal-header {
+  background-color: rgb(161, 81, 133);
+  color: #fff;
+  border-top-left-radius: 20pt;
+  border-top-right-radius: 20pt;
+}
+
+.info {
+  padding: 5pt;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(15%, 50%, 52%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.fa-youtube {
+  color: rgb(15%, 50%, 52%);
+}
+
+.border {
+  border: 2px solid rgb(161, 81, 133) !important;
+  margin-top: -0.1rem;
+  border-bottom-left-radius: 20pt;
+  border-bottom-right-radius: 20pt;
+}

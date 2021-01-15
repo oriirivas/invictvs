@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit {
       'text':'Carlos Silva vildosola 9073 Local 22, La Reina. info@invictvs.cl ',
       'icon': '',
       'iconText': '',
+      'route': '',
       'instagram': 'https://www.instagram.com/invictvspolesportdancestudio/',
       'instagramName': '@invictvspoles...',
       'youtube':''
@@ -37,6 +38,7 @@ export class HomeComponent implements OnInit {
       'text':'Valle de Notros 02797. infotemuco@invictvs.cl',
       'icon': '',
       'iconText': '',
+      'route': '',
       'instagram': 'https://www.instagram.com/invictvspolesportdancetemuco/',
       'instagramName': '@invictvspoles...',
       'youtube':''
@@ -52,6 +54,7 @@ export class HomeComponent implements OnInit {
       'text':'Pole dance multinivel',
       'icon': '',
       'iconText': '',
+      'route': '',
       'instagram': '',
       'instagramName': '',
       'youtube':''
@@ -63,6 +66,7 @@ export class HomeComponent implements OnInit {
       'text':'Clase de tortura donde lloras pero eres feliz de pagarla',
       'icon': '',
       'iconText': '',
+      'route': '',
       'instagram': '',
       'instagramName': '',
       'youtube':''
@@ -74,6 +78,7 @@ export class HomeComponent implements OnInit {
       'text':'Una clase llena de sensualidad y cardio mucho cardio',
       'icon': '',
       'iconText': '',
+      'route': '',
       'instagram': '',
       'instagramName': '',
       'youtube':''
@@ -85,6 +90,7 @@ export class HomeComponent implements OnInit {
       'text':'Clase de pole dance, acondicionamiento fisico, flexibilidad y acrobacias',
       'icon': '',
       'iconText': '',
+      'route': '',
       'instagram': '',
       'instagramName': '',
       'youtube':''
@@ -96,6 +102,7 @@ export class HomeComponent implements OnInit {
       'text':'Clase donde te sentiras toda una gimnasta',
       'icon': '',
       'iconText': '',
+      'route': '',
       'instagram': '',
       'instagramName': '',
       'youtube':''
@@ -107,6 +114,7 @@ export class HomeComponent implements OnInit {
       'text':'Certificación basica, intermadias, online o presencial',
       'icon': '',
       'iconText': '',
+      'route': '',
       'instagram': '',
       'instagramName': '',
       'youtube':''
@@ -118,6 +126,7 @@ export class HomeComponent implements OnInit {
       'text':'Intensivos online o presencial',
       'icon': '',
       'iconText': '',
+      'route': '',
       'instagram': '',
       'instagramName': '',
       'youtube':''
@@ -132,6 +141,7 @@ export class HomeComponent implements OnInit {
       'text':'Instructor de pole sport y pole shoes en santiago',
       'icon': '',
       'iconText': '',
+      'route': '',
       'instagram': 'https://www.instagram.com/felipemendozap/',
       'instagramName': '@felipemendozap',
       'youtube':this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/a06RMHZxPF0')
@@ -143,6 +153,7 @@ export class HomeComponent implements OnInit {
       'text':'Instructor de pole sport y flexibilidad en santiago',
       'icon': '',
       'iconText': '',
+      'route': '',
       'instagram': 'https://www.instagram.com/rickii_pole/',
       'instagramName': '@rickii_pole',
       'youtube':this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/OTQuB231bMc')
@@ -154,6 +165,7 @@ export class HomeComponent implements OnInit {
       'text':'Instructor de pole sport en santiago',
       'icon': '',
       'iconText': '',
+      'route': '',
       'instagram': 'https://www.instagram.com/cayitosan/',
       'instagramName': '@cayitosan',
       'youtube':''
@@ -165,6 +177,7 @@ export class HomeComponent implements OnInit {
       'text':'Instructor de pole sport y paradas de mano en santiago',
       'icon': '',
       'iconText': '',
+      'route': '',
       'instagram': 'https://www.instagram.com/paloma.pole/',
       'instagramName': '@paloma.pole',
       'youtube':''
@@ -176,6 +189,7 @@ export class HomeComponent implements OnInit {
       'text':'Instructor de pole sport en temuco',
       'icon': '',
       'iconText': '',
+      'route': '',
       'instagram': 'https://www.instagram.com/greteln/',
       'instagramName': '@greteln',
       'youtube':''
@@ -187,6 +201,7 @@ export class HomeComponent implements OnInit {
       'text':'Instructor de pole sport en temuco',
       'icon': '',
       'iconText': '',
+      'route': '',
       'instagram': 'https://www.instagram.com/claudiaguerreroperi/',
       'instagramName': '@claudiaguerreroperi',
       'youtube':''
@@ -202,6 +217,7 @@ export class HomeComponent implements OnInit {
       'text':'Chilean pole sport championship',
       'icon': '<i class="fas fa-medal"></i>',
       'iconText': '25',
+      'route': 'medals/1',
       'instagram': '',
       'instagramName': '',
       'youtube':''
@@ -213,6 +229,7 @@ export class HomeComponent implements OnInit {
       'text':'Chile pole championship',
       'icon': '<i class="fas fa-medal"></i>',
       'iconText': '21',
+      'route': 'medals/2',
       'instagram': '',
       'instagramName': '',
       'youtube':''
@@ -224,6 +241,7 @@ export class HomeComponent implements OnInit {
       'text':'Panamerican pole championship',
       'icon': '<i class="fas fa-medal"></i>',
       'iconText': '34',
+      'route': 'medals/3',
       'instagram': '',
       'instagramName': '',
       'youtube':''
@@ -235,6 +253,7 @@ export class HomeComponent implements OnInit {
       'text':'Amateur pole championship',
       'icon': '<i class="fas fa-medal"></i>',
       'iconText': '3',
+      'route': 'medals/4',
       'instagram': '',
       'instagramName': '',
       'youtube':''
@@ -246,6 +265,7 @@ export class HomeComponent implements OnInit {
       'text':'Elevate pole championship',
       'icon': '<i class="fas fa-medal"></i>',
       'iconText': '12',
+      'route': 'medals/5',
       'instagram': '',
       'instagramName': '',
       'youtube':''
@@ -257,6 +277,7 @@ export class HomeComponent implements OnInit {
       'text':'Exotic doll',
       'icon': '<i class="fas fa-medal"></i>',
       'iconText': '1',
+      'route': 'medals/6',
       'instagram': '',
       'instagramName': '',
       'youtube':''
@@ -268,8 +289,9 @@ export class HomeComponent implements OnInit {
       'text':'En Equilibrio pole championship',
       'icon': '<i class="fas fa-medal"></i>',
       'iconText': '7',
+      'route': '',
       'instagram': '',
-      'instagramName': '',
+      'instagramName': 'medals/7',
       'youtube':''
     }
   ]
@@ -282,6 +304,7 @@ export class HomeComponent implements OnInit {
       'text':'La mas importante competencia realizada en chile',
       'icon': '',
       'iconText': '',
+      'route': '',
       'instagram': '',
       'instagramName': '',
       'youtube':''
@@ -293,6 +316,7 @@ export class HomeComponent implements OnInit {
       'text':'Una iniciativa de la invicyvs para juntar a todas las academias del pais en un solo escenario',
       'icon': '',
       'iconText': '',
+      'route': '',
       'instagram': '',
       'instagramName': '',
       'youtube':''
@@ -304,6 +328,7 @@ export class HomeComponent implements OnInit {
       'text':'Competencia de modalidad online',
       'icon': '',
       'iconText': '',
+      'route': '',
       'instagram': '',
       'instagramName': '',
       'youtube':''
@@ -315,6 +340,7 @@ export class HomeComponent implements OnInit {
       'text':'Muestras de coreografias realizadas por nuestras alumnas',
       'icon': '',
       'iconText': '',
+      'route': '',
       'instagram': '',
       'instagramName': '',
       'youtube':''
