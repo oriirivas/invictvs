@@ -9,7 +9,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class VideoComponent implements OnInit {
 
   @Input() title: string ='Videos';
-  @Input() color: string ='rgb(15%, 50%, 52%);';
+  @Input() color: string ='rgb(161, 81, 133)';
   
   constructor(private sanitizer:DomSanitizer) { }
 

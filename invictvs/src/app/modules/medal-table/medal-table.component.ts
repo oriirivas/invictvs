@@ -7,46 +7,46 @@ import { CompetitionModel, MedalModel } from './medal-model';
   styleUrls: ['./medal-table.component.css']
 })
 export class MedalTableComponent implements OnInit {
-  id: number =0;
-  arrayLength: number =0;
+  id: number = 0;
+  arrayLength: number = 0;
   currentData: MedalModel[];
   constructor(private rutaActiva: ActivatedRoute) {
-    this.id=this.rutaActiva.snapshot.params.id 
-    window.scroll(1,0);
+    this.id = this.rutaActiva.snapshot.params.id
+    window.scroll(1, 0);
   }
 
   ngOnInit(): void {
     this.setData()
   }
 
-  setData(){
-     this.data.find( item => {
-      if(item.id==this.id){
+  setData() {
+    this.data.find(item => {
+      if (item.id == this.id) {
         this.currentData = item.data
         this.arrayLength = item.data.length
       }
-   })
+    })
   }
 
   data: CompetitionModel[] = [
     {
-      'id':1, //CHILEAN POLE SPORT
+      'id': 1, //CHILEAN POLE SPORT
       'data': [
-        { 
+        {
           'name': 'Marcia Zarate',
           'category': 'Master 40',
           'place': 1,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Anita Papic',
           'category': 'Master 40',
           'place': 3,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Fernanda Pizarro',
           'category': 'Profesional',
           'place': 3,
@@ -57,262 +57,373 @@ export class MedalTableComponent implements OnInit {
       ]
     },
     {
-      'id':2, //CHILE POLE CHAMPIONSHIP
+      'id': 2, //CHILE POLE CHAMPIONSHIP
       'data': [
-        { 
+        {
           'name': 'Claudia Concha',
           'category': 'Master 40',
           'place': 1,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Anita Papic',
           'category': 'Master 40',
           'place': 2,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Carolina Luzzi',
           'category': 'Master 40',
           'place': 3,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Stephany Butler',
           'category': 'Amateur Femenino 1',
           'place': 2,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Paulina Cifuentes',
           'category': 'Profesional',
           'place': 1,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Felipe Alvarado',
           'category': 'Amateur Masculino 1',
           'place': 1,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Paloma Schneider',
           'category': 'Elite Femenino',
           'place': 1,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Eliana Gallardo',
           'category': 'Elite Femenino',
           'place': 2,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Fernanda Pizarro',
           'category': 'Elite Femenino',
           'place': 3,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Ricardo Bustos',
           'category': 'Elite Masculino',
           'place': 1,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Felipe Mendoza',
           'category': 'Elite Masculino',
           'place': 2,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Valeria Cid',
           'category': 'Juvenil Femenino',
           'place': 2,
           'video': '',
           'year': 2018,
         },
-        { 
+        {
           'name': 'Anita Papic',
           'category': 'Master 40',
           'place': 1,
           'video': '',
           'year': 2018,
         },
-        { 
+        {
           'name': 'Claudia Palma',
           'category': 'Master 40',
           'place': 2,
           'video': '',
           'year': 2018,
         },
-        { 
+        {
           'name': 'Carolina Luzzi',
           'category': 'Master 40',
           'place': 3,
           'video': '',
           'year': 2018,
         },
-        { 
+        {
           'name': 'Milenka Pizarro',
           'category': 'Elite Femenino',
           'place': 1,
           'video': '',
           'year': 2018,
         },
-        { 
+        {
           'name': 'Fernanda Pizarro',
           'category': 'Elite Femenino',
           'place': 2,
           'video': '',
           'year': 2018,
         },
-        { 
+        {
           'name': 'Jomaris Rossell',
           'category': 'Elite Femenino',
           'place': 3,
           'video': '',
           'year': 2018,
         },
+        {
+          'name': 'Sandra Loyola',
+          'category': 'Amateur Femenino 1',
+          'place': 2,
+          'video': '',
+          'year': 2019,
+        },
+        {
+          'name': 'Emilia Jhonson',
+          'category': 'Infantil B1',
+          'place': 2,
+          'video': '',
+          'year': 2019,
+        },
+        {
+          'name': 'Constanza Riquelme',
+          'category': 'Juvenil',
+          'place': 2,
+          'video': '',
+          'year': 2019,
+        },
+        {
+          'name': 'Betty Fuenzalida',
+          'category': 'Master 40 Amateur Fem',
+          'place': 1,
+          'video': '',
+          'year': 2019,
+        },
+        {
+          'name': 'Anita Papic',
+          'category': 'Master 40 Elite',
+          'place': 1,
+          'video': '',
+          'year': 2019,
+        },
+        {
+          'name': 'Claudia Palma',
+          'category': 'Master 40 Elite',
+          'place': 3,
+          'video': '',
+          'year': 2019,
+        },
+        {
+          'name': 'Carmen Munizaga',
+          'category': 'Master 50',
+          'place': 2,
+          'video': '',
+          'year': 2019,
+        },
+        {
+          'name': 'Giany Moreno',
+          'category': 'Profesional',
+          'place': 1,
+          'video': '',
+          'year': 2019,
+        },
+        {
+          'name': 'Stephany Butler',
+          'category': 'Profesional',
+          'place': 3,
+          'video': '',
+          'year': 2019,
+        },
+        {
+          'name': 'Paloma & Paulina',
+          'category': 'Pole Show',
+          'place': 1,
+          'video': '',
+          'year': 2019,
+        },
       ]
     },
     {
-      'id':3, //PAN AMERICAN POLE CHAMPIONSHIP
+      'id': 3, //PAN AMERICAN POLE CHAMPIONSHIP
       'data': [
-        { 
+        {
           'name': 'Felipe Alvarado',
           'category': 'Amateur Masculino',
           'place': 2,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Carolina Luzzi',
           'category': 'Master 40',
           'place': 2,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Anita Papic',
           'category': 'Master 40',
           'place': 3,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Eliana Gallardo',
           'category': 'Elite Femenino',
           'place': 2,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Paloma Schneider',
           'category': 'Elite Femenino',
           'place': 3,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Felipe Mendoza',
           'category': 'Elite Masculino',
           'place': 2,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Felipe Mendoza',
           'category': 'Elite Masculino',
           'place': 1,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Ricardo Bustos',
           'category': 'Elite Masculino',
           'place': 2,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Ricardo Bustos',
           'category': 'Pole Stars',
           'place': 2,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Felipe Mendoza',
           'category': 'Pole Stars',
           'place': 3,
           'video': '',
           'year': 2017,
         },
-        { 
+        {
           'name': 'Paulina Cifuentes',
           'category': 'Profesional',
           'place': 1,
           'video': '',
           'year': 2018,
         },
-        { 
+        {
           'name': 'Anita Papic',
           'category': 'Master 40',
           'place': 1,
           'video': '',
           'year': 2018,
         },
-        { 
+        {
           'name': 'Claudia Palma',
           'category': 'Master 40',
           'place': 3,
           'video': '',
           'year': 2018,
         },
-        { 
+        {
           'name': 'Felipe Mendoza',
           'category': 'Pole Stars',
           'place': 2,
           'video': '',
           'year': 2018,
         },
-        { 
+        {
           'name': 'Ricardo Bustos',
           'category': 'Pole Stars',
           'place': 3,
           'video': '',
           'year': 2018,
         },
-      ]
-    },
-    {
-      'id':4, //Amateur pole championship
-      'data': [
-        { 
-          'name': 'Contanza riquelme',
-          'category': 'juvenil',
+        {
+          'name': 'Constanza Riquelme',
+          'category': 'Juvenil Femenino',
           'place': 1,
+          'video': '',
+          'year': 2019,
+        },
+        {
+          'name': 'Anita Papic',
+          'category': 'Master 40',
+          'place': 1,
+          'video': '',
+          'year': 2019,
+        },{
+          'name': 'Sandra Loyola',
+          'category': 'Amateur Femenino',
+          'place': 2,
+          'video': '',
+          'year': 2019,
+        },
+        {
+          'name': 'Martina Le-bert',
+          'category': 'Amateur Femenino',
+          'place': 3,
           'video': '',
           'year': 2019,
         }
       ]
     },
     {
-      'id':5, //ELEVATE POLE CHAMPIONSHIP
+      'id': 4, //Amateur pole championship
       'data': [
-        { 
+        {
+          'name': 'Betty Fuenzalida',
+          'category': 'Master 40 Amateur Fem',
+          'place': 1,
+          'video': '',
+          'year': 2019,
+        },
+        {
+          'name': 'Sandra Loyola',
+          'category': 'Amateur Femenino',
+          'place': 1,
+          'video': '',
+          'year': 2019,
+        },
+        {
+          'name': 'Martina Le-bert',
+          'category': 'Amateur Femenino',
+          'place': 3,
+          'video': '',
+          'year': 2019,
+        }
+      ]
+    },
+    {
+      'id': 5, //ELEVATE POLE CHAMPIONSHIP
+      'data': [
+        {
           'name': 'Claudia Palma',
           'category': 'Profesional Femenino',
           'place': 3,
@@ -320,11 +431,11 @@ export class MedalTableComponent implements OnInit {
           'year': 2017,
         }
       ]
-    },  
+    },
     {
-      'id':6, //Exotic doll
+      'id': 6, //Exotic doll
       'data': [
-        { 
+        {
           'name': 'Felipe Mendoza',
           'category': 'Flow Work',
           'place': 1,
@@ -334,12 +445,33 @@ export class MedalTableComponent implements OnInit {
       ]
     },
     {
-      'id':7, //EN EQUILIBRIO POLE CHAMPIONSHIP
+      'id': 7, //EN EQUILIBRIO POLE CHAMPIONSHIP
       'data': [
-        { 
+        {
           'name': 'Cheryl Palma',
           'category': 'Profesional',
           'place': 3,
+          'video': '',
+          'year': 2018,
+        },
+        {
+          'name': 'Sandra Loyola',
+          'category': 'Profesional Femenino',
+          'place': 1,
+          'video': '',
+          'year': 2019,
+        },
+        {
+          'name': 'Cheryl Palma',
+          'category': 'Profesional Femenino',
+          'place': 2,
+          'video': '',
+          'year': 2019,
+        },
+        {
+          'name': 'Constanza Riquelme',
+          'category': 'Juvenil Elite',
+          'place': 1,
           'video': '',
           'year': 2019,
         }

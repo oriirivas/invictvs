@@ -11,14 +11,11 @@ import { MedalTableComponent } from '../medal-table/medal-table.component';
 })
 export class HomeComponent implements OnInit {
 
-  public active: string = 'Inicio'
-  
-
   constructor(private sanitizer:DomSanitizer) { }
 
   ngOnInit(): void {
   }
-
+  
 
   sedeData: CarouselModel[] = [ 
     {

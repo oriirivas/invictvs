@@ -1,23 +1,61 @@
-<nav class="navbar navbar-expand-lg d-center">
-    <!-- <a class="navbar-brand" href="#">Invictvs</a> -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse d-center" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a routerLink="/home" routerLinkActive="active">Inicio<span class="sr-only">(current)</span></a>
+<!-- <div class="menu d-center mb-3" [ngStyle]="{background: color}">
+  <ul class="d-center p-0">
+    <li class="row menuText nav-item">
+      <a href="#sedes">Sedes</a>
+    </li>
+    <li class="row menuText nav-item">
+      <a href="#clases">Clases</a>
+    </li>
+    <li class="row menuText nav-item">
+      <a href="#instructores">Instructores</a>
+    </li>
+    <li class="row menuText nav-item">
+      <a href="#medallero">Medallero</a>
+    </li>
+    <li class="row menuText nav-item">
+      <a href="#eventos">Eventos</a>
+    </li>
+    <li class="row menuText nav-item">
+      <a href="#videos">Videos</a>
+    </li>
+  </ul>
+</div> -->
+
+<nav class="navbar navbar-expand-lg menu d-center mb-3" [ngStyle]="{background: color}">
+  <!-- <img class="blueBtn" src="assets/Logo3.png" routerLink="/home" /> -->
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+  <i class="fas fa-align-justify"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav d-center col-12">
+      <ul class="d-center p-0">
+        <li class="row menuText nav-item">
+          <a href="#sedes">Sedes</a>
         </li>
-        <li class="nav-item">
-          <a routerLink="/medallas" routerLinkActive="active">Medallas</a>
+        <li class="row menuText nav-item">
+          <a href="#clases">Clases</a>
         </li>
-        <li class="nav-item">
-          <a routerLink="/instructores" routerLinkActive="active">Instructores</a>
+        <li class="row menuText nav-item">
+          <a href="#instructores">Instructores</a>
         </li>
-        <li class="nav-item">
-          <a routerLink="/eventos" routerLinkActive="active">Eventos</a>
+        <li class="row menuText nav-item">
+          <a href="#medallero">Medallero</a>
+        </li>
+        <li class="row menuText nav-item">
+          <a href="#eventos">Eventos</a>
+        </li>
+        <li class="row menuText nav-item">
+          <a href="#videos">Videos</a>
         </li>
       </ul>
     </div>
-    <!-- <img class="logoWatts" src="../../../assets/img/products/logowatts.png"> -->
-  </nav>
+  </div>
+</nav>
