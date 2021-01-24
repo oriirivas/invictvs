@@ -12,7 +12,6 @@ import { CarouselComponent } from './modules/carousel/carousel.component';
 import { SwiperModule } from 'swiper/angular';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { VideoComponent } from './modules/video/video.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +20,7 @@ import { VideoComponent } from './modules/video/video.component';
     FooterComponent,
     MedalTableComponent,
     CarouselComponent,
-    VideoComponent
+    VideoComponent,
   ],
   imports: [
     BrowserModule,
