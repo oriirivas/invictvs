@@ -1,4 +1,9 @@
 .back{
     background-color: rgb(15%, 50%, 52%);
+}
+
+.social-icon, .info-icon{
     color: #fff;
+    font-size: 20px;
+    padding: 1rem;
 }
