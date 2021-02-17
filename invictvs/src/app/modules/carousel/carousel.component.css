@@ -1,11 +1,18 @@
-.titleBar{
-  font-family: 'Montserrat', sans-serif;
-  background-color: rgb(15%, 50%, 52%); 
+.titleBar {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(15%, 50%, 52%);
+  /* background: linear-gradient(to right, rgb(13, 64, 66) , rgb(15%, 50%, 52%), rgb(142, 189, 192));  */
   color: white;
   padding-top: 0.4rem;
 }
+.btn {
+  color: rgb(161, 81, 133);
+}
+.btn:focus {
+  box-shadow: none;
+}
 a {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-decoration: none;
   font-weight: bold;
   color: #fff;
@@ -45,14 +52,15 @@ a {
   padding: 20px;
   text-align: center;
   margin-top: -15pt;
-  min-height: 100pt;
+  min-height: 125pt;
+  font-size: 11pt;
 }
 .cardText > a {
   text-align: left;
   color: rgb(161, 81, 133);
 }
 .instagramName {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 10pt;
   color: rgb(15%, 50%, 52%);
   padding: 5pt;
@@ -74,15 +82,14 @@ a {
   height: 90px;
   border: 5px rgb(161, 81, 133) solid;
 }
-.justText{
+.justText {
   height: 70px;
-
 }
 .circleIcon {
   width: 70px;
   height: 70px;
   border: 5px goldenrod solid;
-  color: darkgoldenrod ;
+  color: darkgoldenrod;
 }
 .image {
   width: 80px;
@@ -94,9 +101,10 @@ a {
 /* tentativooooo */
 @media only screen and (max-width: 480px) {
   :host ::ng-deep .swiper-slide-prev {
-    margin-left: 20px;  
-  } 
-  .h1, h1 {
+    margin-left: 20px;
+  }
+  .h1,
+  h1 {
     font-size: 1.5rem !important;
   }
 }

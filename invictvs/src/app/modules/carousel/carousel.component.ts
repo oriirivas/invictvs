@@ -7,16 +7,18 @@ import { CarouselModel } from './carousel.model';
 })
 export class CarouselComponent implements OnInit {
 
-  @Input() data: CarouselModel | undefined;
+  @Input() data: CarouselModel[] | undefined;
   @Input() title: string ='';
   @Input() color: string ='rgb(15%, 50%, 52%);';
   @Input() slidesPerView: number = 4;
   @Input() spaceBetween: number = 60;
+
+  showMoreList=[]
+  breakPoints={}
   constructor() { }
 
   ngOnInit(): void {
   }
-  breakPoints={}
   ngOnChanges() {
     this.breakPoints = {
       320: {
@@ -35,6 +37,16 @@ export class CarouselComponent implements OnInit {
       }
     }
 
+  }
+
+  showMore(index: number){
+    if(this.showMoreList.includes(this.data[index].name)){
+      this.data[index].text = this.data[index].shortText
+      this.showMoreList = this.showMoreList.filter(item => item !== this.data[index].name)
+    }else{
+      this.showMoreList.push(this.data[index].name)
+      this.data[index].text = this.data[index].largeText
+    }
   }
 
 }
