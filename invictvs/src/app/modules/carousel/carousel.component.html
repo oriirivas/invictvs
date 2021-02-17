@@ -41,17 +41,15 @@
                 </div>
               </ng-container>
               <div class="cardText d-center">
-                <span>{{ item?.text}} </span>
+                <span [ngStyle]="{ 'font-size': item?.name ? '' : '14pt' }">{{ item?.text}} </span>
                 <button class="btn" *ngIf="item?.shortText" (click)="showMore(i)">
                   {{item?.text.length < 100 ? 'ver más' : 'ver menos' }}
                 </button>
                 <a *ngIf="item?.instagram" [href]="item.instagram" class=" d-center p-2">
                   <i class="fa fa-instagram" aria-hidden="true"></i>
-                  <!-- <span class="instagramName"> {{ item?.instagramName }} </span> -->
                 </a>
                 <a *ngIf="item?.youtube" [href]="item.youtube" class="d-center p-2">
                   <i class="fa fa-youtube" aria-hidden="true"></i>
-                  <!-- <span class="instagramName"> {{ item?.instagramName }} </span> -->
                 </a>
               </div>
             </article>

@@ -7,17 +7,19 @@
   color: #fff;
   border-top-left-radius: 20pt;
   border-top-right-radius: 20pt;
+  font-size: 10pt;
 }
 
 .info {
   padding: 5pt;
+  margin-bottom: 5pt;
   padding-bottom: 15px;
   border-bottom: 1px solid rgb(15%, 50%, 52%);
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.fa-youtube, .back {
+.fa-youtube, .back, .btn {
   color: rgb(15%, 50%, 52%);
 }
 .back{
@@ -29,4 +31,11 @@
   margin-top: -0.1rem;
   border-bottom-left-radius: 20pt;
   border-bottom-right-radius: 20pt;
+}
+.btn:focus{
+  box-shadow: none;
+}
+.btnCustom{
+  color: #fff;
+  cursor: pointer;
 }

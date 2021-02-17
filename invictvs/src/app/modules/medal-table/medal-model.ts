@@ -4,9 +4,10 @@ export class MedalModel {
     place:number;
     video:string;
     year:number;
-}
+  }
 
-export class CompetitionModel {
+  export class CompetitionModel {
     id: number;
+    name:string;
     data:MedalModel[];
 }

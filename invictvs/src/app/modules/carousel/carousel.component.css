@@ -59,12 +59,6 @@ a {
   text-align: left;
   color: rgb(161, 81, 133);
 }
-.instagramName {
-  font-family: "Montserrat", sans-serif;
-  font-size: 10pt;
-  color: rgb(15%, 50%, 52%);
-  padding: 5pt;
-}
 .cardName {
   /* margin-top: -30pt; */
   margin-top: -35pt;

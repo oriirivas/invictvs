@@ -11,7 +11,16 @@ export class MedalTableComponent implements OnInit {
   id: number = 0;
   arrayLength: number = 0;
   currentData: MedalModel[];
+  name: string = '<i class="fas fa-sort-up"></i>'
+  arrowPlace: string = '<i class="fas fa-sort-up"></i>'
+  arrowName: string = '<i class="fas fa-sort-up"></i>'
+  arrowCategory: string = '<i class="fas fa-sort-up"></i>'
+  arrowDate: string = '<i class="fas fa-sort-up"></i>'
   private sortList: SortList;
+  isPlaceDescendent:boolean=true
+  isNameDescendent:boolean=true
+  isCategoryDescendent:boolean=true
+  isDateDescendent:boolean=true
 
   constructor(private rutaActiva: ActivatedRoute) {
     this.id = this.rutaActiva.snapshot.params.id
@@ -20,25 +29,76 @@ export class MedalTableComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.setData()
+    this.setData("year")
   }
 
-  setData() {
+  setData(attribute: string) {
     this.data.find(item => {
       if (item.id == this.id) {
-        this.currentData = this.sortList.sortByAttributeDesc(item.data, "year");
-        console.log( this.currentData)
-        // this.currentData = item.data
+        this.currentData = this.sortList.sortByAttributeDesc(item.data, attribute);
         this.arrayLength = item.data.length
-        // console.log(this.arrayLength);
-        
+        this.name=item.name
       }
     })
+  }
+  setDataAscendent(attribute: string) {
+    this.data.find(item => {
+      if (item.id == this.id) {
+        this.currentData = this.sortList.sortByAttribute(item.data, attribute);
+        this.arrayLength = item.data.length
+        this.name=item.name
+      }
+    })
+  }
+  sortPlace(){
+    if(this.isPlaceDescendent){
+      this.setDataAscendent("place")
+      this.isPlaceDescendent = false
+      this.arrowPlace='<i class="fas fa-sort-down"></i>'
+    }else {
+      this.setData("place");
+      this.isPlaceDescendent = true
+      this.arrowPlace='<i class="fas fa-sort-up"></i>'
+    }
+  }
+  sortName(){
+    if(this.isPlaceDescendent){
+      this.setDataAscendent("name")
+      this.isNameDescendent = false
+      this.arrowName='<i class="fas fa-sort-down"></i>'
+    }else {
+      this.setData("name");
+      this.isNameDescendent = true
+      this.arrowName='<i class="fas fa-sort-up"></i>'
+    }
+  }
+  sortCategory(){
+    if(this.isCategoryDescendent){
+      this.setDataAscendent("category")
+      this.isCategoryDescendent = false
+      this.arrowCategory='<i class="fas fa-sort-down"></i>'
+    }else {
+      this.setData("category");
+      this.isCategoryDescendent = true
+      this.arrowCategory='<i class="fas fa-sort-up"></i>'
+    }
+  }
+  sortDate(){
+    if(this.isDateDescendent){
+      this.setDataAscendent("year")
+      this.isDateDescendent = false
+      this.arrowDate='<i class="fas fa-sort-down"></i>'
+    }else {
+      this.setData("year");
+      this.isDateDescendent = true
+      this.arrowDate='<i class="fas fa-sort-up"></i>'
+    }
   }
 
   data: CompetitionModel[] = [
     {
       'id': 1, //CHILEAN POLE SPORT
+      'name': 'CHILEAN POLE SPORT',
       'data': [
         {
           'name': 'Marcia Zarate',
@@ -66,6 +126,7 @@ export class MedalTableComponent implements OnInit {
     },
     {
       'id': 2, //CHILE POLE CHAMPIONSHIP
+      'name': 'CHILE POLE CHAMPIONSHIP',
       'data': [
         {
           'name': 'Claudia Concha',
@@ -267,6 +328,7 @@ export class MedalTableComponent implements OnInit {
     },
     {
       'id': 3, //PAN AMERICAN POLE CHAMPIONSHIP
+      'name': 'PAN AMERICAN POLE CHAMPIONSHIP',
       'data': [
         {
           'name': 'Felipe Alvarado',
@@ -397,6 +459,7 @@ export class MedalTableComponent implements OnInit {
     },
     {
       'id': 4, //Amateur pole championship
+      'name': 'AMATEUR POLE CHAMPIONSHIP',
       'data': [
         {
           'name': 'Betty Fuenzalida',
@@ -423,6 +486,7 @@ export class MedalTableComponent implements OnInit {
     },
     {
       'id': 5, //ELEVATE POLE CHAMPIONSHIP
+      'name': 'ELEVATE POLE CHAMPIONSHIP',
       'data': [
         {
           'name': 'Claudia Palma',
@@ -435,6 +499,7 @@ export class MedalTableComponent implements OnInit {
     },
     {
       'id': 6, //Exotic doll
+      'name': 'Exotic Doll',
       'data': [
         {
           'name': 'Felipe Mendoza',
@@ -447,6 +512,7 @@ export class MedalTableComponent implements OnInit {
     },
     {
       'id': 7, //EN EQUILIBRIO POLE CHAMPIONSHIP
+      'name': 'EN EQUILIBRIO POLE CHAMPIONSHIP',
       'data': [
         {
           'name': 'Cheryl Palma',
