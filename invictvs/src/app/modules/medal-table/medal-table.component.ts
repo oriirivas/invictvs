@@ -11,6 +11,7 @@ export class MedalTableComponent implements OnInit {
   id: number = 0;
   arrayLength: number = 0;
   currentData: MedalModel[];
+  public currentDataListAll = [];
   name: string = '<i class="fas fa-sort-up"></i>'
   arrowPlace: string = '<i class="fas fa-sort-up"></i>'
   arrowName: string = '<i class="fas fa-sort-up"></i>'
@@ -38,6 +39,7 @@ export class MedalTableComponent implements OnInit {
         this.currentData = this.sortList.sortByAttributeDesc(item.data, attribute);
         this.arrayLength = item.data.length
         this.name=item.name
+        this.currentDataListAll =  this.currentData;
       }
     })
   }
@@ -548,11 +550,9 @@ export class MedalTableComponent implements OnInit {
   ]
 
 
-  // public getMedalNumber(id: number) {
-  //   this.data.find( item => {
-  //    if(item.id==this.id){
-  //      return item.data.length
-  //    }
-  // })
-  // }
+  public filterByName(value: string) {
+    this.currentData = this.currentDataListAll.filter((item) =>
+      item.name.toLowerCase().includes(value.toLowerCase())
+    );
+  }
 }

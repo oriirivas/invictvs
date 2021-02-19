@@ -5,8 +5,16 @@
         <div class="pb-4 pl-3 " >
           <a class="back" routerLink='/' routerLinkActive="router-link-active" ><strong><</strong> Volver</a>
         </div>
-        <div class="back d-center pb-4" >
+        <div class="title d-center pb-4" >
           <span>{{this.name}}</span>
+        </div>
+        <div class="m-2 d-center">
+          <label class="labelFilter">Buscar:</label>
+          <input
+            class="inputFilter"
+            (keyup)="filterByName($event.target.value)"
+            placeholder="Ingrese información"
+          />
         </div>
       <div class="modal-header d-flex justify-content-around">
         <div class="col-1 pr-5 d-flex">

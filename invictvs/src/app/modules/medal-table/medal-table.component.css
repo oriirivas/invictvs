@@ -19,7 +19,7 @@
   justify-content: space-around;
   align-items: center;
 }
-.fa-youtube, .back, .btn {
+.fa-youtube, .back, .btn, .labelFilter {
   color: rgb(15%, 50%, 52%);
 }
 .back{
@@ -38,4 +38,19 @@
 .btnCustom{
   color: #fff;
   cursor: pointer;
+}
+.labelFilter{
+  font-size: 500;
+}
+.inputFilter {
+  border-radius: 10px;
+  margin-left: 6pt;
+  border: 2px solid rgb(161, 81, 133);
+  padding: 2px 6px;
+  color: rgb(161, 81, 133);
+}
+
+.title {
+  color: rgb(161, 81, 133);
+
 }
